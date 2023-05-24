@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"Granary/config"
+	"Granary/dao"
+	"Granary/routes"
+	"github.com/spf13/viper"
+)
 
+// 程序入口
 func main() {
-	fmt.Print("hello")
+
+	config.InitConfig()
+	dao.InitDb()
+	engine := routes.InitRoutes()
+	engine.Run(viper.GetString("HttpPort"))
+
 }

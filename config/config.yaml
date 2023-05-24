@@ -1,0 +1,8 @@
+AppMode: debug
+HttpPort: :3000
+mysql:
+  Host:
+  Port:
+  User:
+  PassWord:
+  Name:
